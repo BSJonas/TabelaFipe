@@ -1,5 +1,6 @@
 package br.com.desafio.tabelafipe;
 
+import br.com.desafio.tabelafipe.principal.Principal;
 import br.com.desafio.tabelafipe.service.ConsumoApi;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,8 +16,7 @@ public class TabelaFipeApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		ConsumoApi consumoApi = new ConsumoApi();
-		var json = consumoApi.obterDados("https://parallelum.com.br/fipe/api/v1/carros/marcas");
-		System.out.println(json);
+		Principal principal = new Principal();
+		principal.exibeMenu();
 	}
 }
